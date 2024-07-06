@@ -45,7 +45,7 @@ static int TeamColors[][] =
 {
 	{ 255, 200, 200, 255 },
 	{ 255, 165, 0, 255 },
-	{ 0, 0, 139, 255 },
+	{ 0, 100, 220, 255 },
 	{ 139, 0, 0, 255 }
 };
 
@@ -1140,7 +1140,7 @@ public bool Gamemode_ConditionVip(TFTeam &team)
 		team = TFTeam_Blue;
 		group = 2;
 	}
-	else if(salive && !sescape)	// SCP alive and none escaped
+	else if(salive && !sescape && !scapture)	// SCP alive and none escaped/captured
 	{
 		team = TFTeam_Red;
 		group = 3;
